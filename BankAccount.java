@@ -11,6 +11,7 @@ public class BankAccount {
     public BankAccount(){
         this.checkingBalance = 0;
         this.savingBalance = 0;
+        accounts++;
     }
 
 
@@ -23,11 +24,13 @@ public class BankAccount {
     public double getSavingBalance(){
         return this.savingBalance;
     }
+
+    //*don't need this if it is static
     public static int getAccounts(){
-        return this.accounts;
+        return accounts;
     }
     public static double getTotalMoney(){
-        return this.totalMoney;
+        return totalMoney;
     }
 
 
@@ -35,34 +38,31 @@ public class BankAccount {
     //! METHODS
     // deposit
     // - users should be able to deposit money into their checking or saving account
-    public void deposit(double deposit){
+    public void depositChecking(double deposit){
         this.checkingBalance += deposit;
         totalMoney += deposit;
     }
 
-    public void deposit(double deposit){
+    public void depositSaving(double deposit){
         this.savingBalance += deposit;
         totalMoney += deposit;
     }
-
-
-
 
     //! Withdraw 
     // - users should be able to withdraw money from their checking or saving account
     // - do not allow them to withdraw money if there are insufficient funds
     // - all deposits and withdrawals should affect totalMoney
-    public void withdraw(double withdraw){
+    public void withdrawChecking(double withdraw){
         if(this.checkingBalance < withdraw){
-            System.out.println("Insufficient funds")
+            System.out.println("Insufficient funds");
         }else{
             this.checkingBalance -= withdraw;
             totalMoney -= withdraw;
         }
     }
-    public void withdraw(double withdraw){
+    public void withdrawSaving(double withdraw){
         if(this.savingBalance < withdraw){
-            System.out.println("Insufficient funds")
+            System.out.println("Insufficient funds");
         }else{
             this.savingBalance -= withdraw;
             totalMoney -= withdraw;

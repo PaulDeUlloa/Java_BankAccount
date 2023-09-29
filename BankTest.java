@@ -14,9 +14,9 @@ public class BankTest {
         //! Deposit Test
         // - deposit some money into each bank account's checking or savings account and display the balance each time
         // - each deposit should increase the amount of totalMoney
-        account1.deposit(100);
-        account2.deposit(300);
-        account3.deposit(467); 
+        account1.depositChecking(100);
+        account2.depositSaving(300);
+        account3.depositChecking(467); 
         System.out.println("account1 Money: " + account1.getCheckingBalance());
         System.out.println("account2 Money: " + account2.getCheckingBalance());
         
@@ -25,9 +25,9 @@ public class BankTest {
         // - withdraw some money from each bank account's checking or savings account and display the remaining balance
         // - each withdrawal should decrease the amount of totalMoney
 
-        account1.withdraw(50);
-        account2.withdraw(40);
-        account3.withdraw(67); 
+        account1.withdrawChecking(50);
+        account2.withdrawChecking(40);
+        account3.withdrawSaving(67); 
 
         System.out.println("account1 Money: " + account1.getCheckingBalance());
         System.out.println("account2 Money: " + account2.getCheckingBalance());
