@@ -1,6 +1,6 @@
 public class BankTest {
     public static void main(String[] args){
-        // Create 3 bank accounts
+        //! Create 3 bank accounts
 
         System.out.println("Total Accounts: " + BankAccount.getAccounts());
         //* ^gives us current count before going through the listed below accounts
@@ -11,7 +11,7 @@ public class BankTest {
 
 
 
-        // Deposit Test
+        //! Deposit Test
         // - deposit some money into each bank account's checking or savings account and display the balance each time
         // - each deposit should increase the amount of totalMoney
         account1.deposit(100);
@@ -21,7 +21,7 @@ public class BankTest {
         System.out.println("account2 Money: " + account2.getCheckingBalance());
         
 
-        // Withdrawal Test
+        //! Withdrawal Test
         // - withdraw some money from each bank account's checking or savings account and display the remaining balance
         // - each withdrawal should decrease the amount of totalMoney
 
@@ -33,12 +33,7 @@ public class BankTest {
         System.out.println("account2 Money: " + account2.getCheckingBalance());
 
 
-
-
-
-
-
-        // Static Test (print the number of bank accounts and the totalMoney)
+        //! Static Test (print the number of bank accounts and the totalMoney)
 
         System.out.println("Total Accounts: " + BankAccount.getAccounts());
         System.out.println("Total Money: " + BankAccount.getTotalMoney());
